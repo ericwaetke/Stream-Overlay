@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Helvetica Extended Black';
+    src: url('./font/HelveticaNeueLTStd-BlkEx.woff2') format('woff2'),
+        url('./font/HelveticaNeueLTStd-BlkEx.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Extended';
+    src: url('./font/HelveticaNeueLTStd-Ex.woff2') format('woff2'),
+        url('./font/HelveticaNeueLTStd-Ex.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+:root{
+    --main-width: 400px;
+    --current-color-r: 244;
+    --current-color-g: 0;
+    --current-color-b: 0;
+    --border-width: 8px;
+}
+
+body{
+    margin: 0;
+    position: relative;
+    height: 1080px;
+    width: 1920px;
+}
+
+.follower, .chatbox {
+    position: absolute;
+    background: rgba(37, 39, 48, .5);
+    border-radius:15px;
+    right: 70px;
+    width: var(--main-width);
+}
+
+.follower{
+    top: 35px;
+    height: 110px;
+    text-align: center;
+}
+
+.black {
+    font-family: "Helvetica Extended Black", sans-serif;
+    color: rgb(var(--current-color-r),var(--current-color-g), var(--current-color-b));
+}
+
+.chatbox {
+    height: 480px;
+    top: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbox iframe {
+    height: 90%;
+    width: 80%;
+    --name-color: rgb(244, 0 ,0);
+}
+
+.facecam{
+    position: absolute;
+    right: 70px;
+    border-radius: 15px;
+    height: calc(235px - var(--border-width) * 2);
+    width: calc(var(--main-width) - var(--border-width) * 2);
+    border: solid var(--border-width) rgb(var(--current-color-r),var(--current-color-g), var(--current-color-b));
+    bottom: 70px;
+    box-shadow: rgba(var(--current-color-r),var(--current-color-g), var(--current-color-b), .25) 5px 0 150px;
+}
